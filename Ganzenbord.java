@@ -6,9 +6,8 @@ public class Ganzenbord {
 		Scanner scanner = new Scanner(System.in);
 		Bord ganzenbord = new Bord();
 		
-		ganzenbord.zetten(ganzenbord.ganzen[0]);
-		ganzenbord.zetten(ganzenbord.ganzen[1]);
-		ganzenbord.zetten(ganzenbord.ganzen[2]);
+		ganzenbord.zetten(ganzenbord.ganzen[0], ganzenbord.ganzen[1], ganzenbord.ganzen[2]);
+		
 	}
 
 
@@ -25,7 +24,7 @@ class Bord{
 		ganzen[2] = new Gans("Blauw");
 		
 	}
-	void zetten (Gans gans1) {
+	void zetten (Gans gans1, Gans gans2, Gans gans3) {
 		Scanner scanner = new Scanner(System.in);
 		for(int x = 0; x < 10 ; x++) {
 			gans1.lopen(dobbelsteen1);
@@ -36,8 +35,25 @@ class Bord{
 			if (invoer.equals("Q")) {
 				break;
 			} else if(invoer.equals("G")) {
-				continue;
 			}		
+			gans2.lopen(dobbelsteen1);
+			dobbelsteen1.werpen();	
+			System.out.println("Nog een keer gooien toets G");
+			System.out.println("Stop met gooien toets Q");
+			String invoer2 = scanner.next();
+			if (invoer2.equals("Q")) {
+				break;
+			} else if(invoer2.equals("G")) {
+			}	
+			gans3.lopen(dobbelsteen1);
+			dobbelsteen1.werpen();	
+			System.out.println("Nog een keer gooien toets G");
+			System.out.println("Stop met gooien toets Q");
+			String invoer3 = scanner.next();
+			if (invoer3.equals("Q")) {
+				break;
+			} else if(invoer3.equals("G")) {
+			}	
 		}
 	}
 }

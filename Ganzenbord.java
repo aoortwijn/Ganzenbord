@@ -27,8 +27,8 @@ class Bord{
 	void zetten (Gans gans1, Gans gans2, Gans gans3) {
 		Scanner scanner = new Scanner(System.in);
 		for(int x = 0; x < 10 ; x++) {
-			gans1.lopen(dobbelsteen1);
 			dobbelsteen1.werpen();	
+			gans1.lopen(dobbelsteen1);
 			System.out.println("Nog een keer gooien toets G");
 			System.out.println("Stop met gooien toets Q");
 			String invoer = scanner.next();
@@ -36,8 +36,9 @@ class Bord{
 				break;
 			} else if(invoer.equals("G")) {
 			}		
+
+			dobbelsteen1.werpen();
 			gans2.lopen(dobbelsteen1);
-			dobbelsteen1.werpen();	
 			System.out.println("Nog een keer gooien toets G");
 			System.out.println("Stop met gooien toets Q");
 			String invoer2 = scanner.next();
@@ -45,8 +46,9 @@ class Bord{
 				break;
 			} else if(invoer2.equals("G")) {
 			}	
-			gans3.lopen(dobbelsteen1);
+
 			dobbelsteen1.werpen();	
+			gans3.lopen(dobbelsteen1);
 			System.out.println("Nog een keer gooien toets G");
 			System.out.println("Stop met gooien toets Q");
 			String invoer3 = scanner.next();
@@ -77,7 +79,15 @@ class Gans{
 	}
 	void lopen(Dobbelsteen dobbelsteen) {
 		positie = positie + dobbelsteen.uitkomst;
-		System.out.println(kleur+"Je staat op vakje: " + positie);
+		System.out.println(kleur+": Je staat op vakje: " + positie);
+		if(positie == 3) {
+			System.out.println("Ga terug naar start");
+			positie = 1;
+		}else if (positie == 5) {
+			int positie2 = positie + dobbelsteen.uitkomst;
+			System.out.println("Bonusstapjes! Je staat op vakje: " + positie2); 
+			positie = positie2;
+			
+		}
 	}
 }
-

@@ -69,12 +69,38 @@ class Gans{
 			int positie2 = positie + dobbelsteen.uitkomst;
 			System.out.println("Bonusstapjes! Je gaat naar vakje: " + positie2); 
 			positie = positie2;	
-		}else if(positie == 2) {
+		}else if(positie == 23) {
 			System.out.println("Je zit in de gevangenis. Het spel is over");
 			System.exit(0);			
-		}else if(positie >= 63 ) {
+		}else if(positie == 63 ) {
 			System.out.println(kleur + "heeft het spel gewonnen");
 			System.exit(0);
+		}else if(positie == 64) {
+			positie = 62;
+			System.out.println (kleur + " komt niet precies uit op de finish. ");
+			System.out.println (kleur + " staat op vakje " + positie);
+		}else if(positie == 65) {
+			positie = 61;
+			System.out.println (kleur + " komt niet precies uit op de finish. ");
+			System.out.println (kleur + " staat op vakje " + positie);
+		}else if(positie == 66) {
+			positie = 60;
+			System.out.println (kleur + " komt niet precies uit op de finish. ");
+			System.out.println (kleur + " staat op vakje " + positie);
+		}else if(positie == 67) {
+			positie = 59;
+			System.out.println (kleur + " komt niet precies uit op de finish. ");
+			System.out.println (kleur + " staat op vakje " + positie);
+		}else if(positie == 68) {
+			positie = 58;
+			System.out.println (kleur + " komt niet precies uit op de finish. ");
+			System.out.println (kleur + " staat op vakje " + positie);
 		}
+		
+		
+		
+		
+		
+		
 	}
 }

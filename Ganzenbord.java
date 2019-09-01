@@ -65,17 +65,16 @@ class Gans{
 		if(positie == 25 | positie == 45) {
 			System.out.println("Ga terug naar start");
 			positie = 1;
-		}else if (positie == 10 | positie == 20 | positie == 30 | positie == 40 | positie == 50) {
-// Kan de regel hierboven ook korter?			
+		}else if (positie == 10 | positie == 20 | positie == 30 | positie == 40 | positie == 50) {		
 			int positie2 = positie + dobbelsteen.uitkomst;
 			System.out.println("Bonusstapjes! Je gaat naar vakje: " + positie2); 
 			positie = positie2;	
-		}else if(positie == 23) {
+		}else if(positie == 2) {
 			System.out.println("Je zit in de gevangenis. Het spel is over");
-// spel stoppen, hoe? 			
+			System.exit(0);			
 		}else if(positie >= 63 ) {
 			System.out.println(kleur + "heeft het spel gewonnen");
-// spel stoppen, hoe?			
+			System.exit(0);
 		}
 	}
 }

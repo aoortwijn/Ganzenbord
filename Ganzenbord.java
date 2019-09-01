@@ -95,6 +95,15 @@ class Gans{
 			positie = 58;
 			System.out.println (kleur + " komt niet precies uit op de finish. ");
 			System.out.println (kleur + " staat op vakje " + positie);
+		}else if (positie ==6) {
+			System.out.println(kleur + " staat op de brug. Ga verder naar 12");
+			positie = 12;
+		}else if (positie ==42) {
+			System.out.println(kleur + " is in het doolhof beland. Je gaat terug naar 39");
+			positie = 39;
+		}else if (positie == 58) {
+			System.out.println(kleur + " is dood. Je gaat terug naar start");
+			positie = 1;
 		}
 		
 		
